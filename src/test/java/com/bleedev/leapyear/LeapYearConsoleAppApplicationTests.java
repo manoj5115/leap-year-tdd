@@ -22,14 +22,14 @@ class LeapYearConsoleAppApplicationTests {
 	}
 
 	@Test
-	public void isLeapYearValid_True() throws Exception {
+	public void isLeapYearValid_True() {
 		boolean result = featureObj.checkLeapYear(year);
 		assertEquals(true, result);
 		
 	}
 	
 	@Test
-	public void isLeapYearValid_False() throws Exception {
+	public void isLeapYearValid_False() {
 		boolean result = featureObj.checkLeapYear(invalidYear);
 		assertEquals(false, result);
 		
