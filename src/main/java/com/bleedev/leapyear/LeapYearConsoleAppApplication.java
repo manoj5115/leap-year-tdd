@@ -18,14 +18,31 @@ public class LeapYearConsoleAppApplication implements CommandLineRunner {
 		System.out.println("LeapYear Application stopped");
 	}
 
-	public boolean checkLeapYear(String inputYear) throws Exception {
+	public boolean checkLeapYear(String inputYear) {
 		try {
 			int validYear = Integer.parseInt(inputYear);
+
+			boolean divisible400 = validYear % 400 == 0;
 			
+			boolean divisible4 = validYear % 4 == 0;
+			
+			boolean divisible100 = validYear % 100 == 0;
+			
+			if(!divisible4) {
+				return false;
+			}
+			else if(!divisible100) {
+				return true;
+			}
+			else if(!divisible400){
+				return false;
+			}
+			else {
+				return true;
+			}
+
 		} catch (Exception e) {
 			return false;
 		}
-
-		return true;
 	}
 }
