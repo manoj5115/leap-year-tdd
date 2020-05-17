@@ -22,7 +22,7 @@ class LeapYearConsoleAppApplicationTests {
 	@BeforeEach
 	public void contextLoads() {
 		featureObj = new LeapYearConsoleAppApplication();
-		year = "1947";
+		year = "2016";
 		invalidYear = "invalid";
 		divisibleBy400 = "2000";
 		divisibleBy400Invalid = "2001";
